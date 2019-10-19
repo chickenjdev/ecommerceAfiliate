@@ -7,177 +7,186 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aurel</title>
 
-
-    <link rel="stylesheet" type="text/css" href="../src/stylesheets/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
 
 </head>
 
-<body >
-    
-    <div class="header">
-        <!-- title bar -->
-        <div class="tit-bar">
-            <div class="tit-bar-container container">
-                <ul class="tit-bar-options ">
-                    <li class="vertical-center text-white">
-                        <div id="notify">
-                            <i class="material-icons vertical-center">notifications_none</i>
-                            <span class="vertical-center">Notify</span>
-                        </div>
-    
-                    </li>
-                    <li class="vertical-center text-white">
-                        <div id="sign-up">
-                            <i class="material-icons vertical-center ">person</i>
-                            <span class="vertical-center ">Sign Up</span>
-                        </div>
-                    </li>
-                    <li class="vertical-center text-white">
-                        <div id="login">
-                            <i class="material-icons vertical-center">account_circle</i>
-                            <span class="vertical-center ">Log In</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- header main -->
-        <div class="header-main container">
-            <a href="./">
-                <img src="../resources/logo/white-logo.png" id="logo" class="cursor-hand"></img>
-            </a>
-    
-            <div id="search-bar">
-                <div>
-                    <input type="text" id="search-box" placeholder="Search in Aurel">
-                    <button id="search-button" class="material-icons vertical-center">search
-    
-                    </button>
+<body ng-app="ecomApp" ng-controller="MainController">
+    <div id="root" style="display: none;">
+        <div class="header">
+                <!-- {{test}} -->
+            <!-- title bar -->
+            <div class="tit-bar">
+                <div class="tit-bar-container container">
+                    <ul class="tit-bar-options ">
+                        <li class="vertical-center text-white">
+                            <div id="notify">
+                                <i class="material-icons vertical-center">notifications_none</i>
+                                <span class="vertical-center">Notify</span>
+                            </div>
+        
+                        </li>
+                        <li class="vertical-center text-white">
+                            <div id="sign-up">
+                                <i class="material-icons vertical-center ">person</i>
+                                <span class="vertical-center ">Sign Up</span>
+                            </div>
+                        </li>
+                        <li class="vertical-center text-white">
+                            <div id="login">
+                                <i class="material-icons vertical-center">account_circle</i>
+                                <span class="vertical-center ">Log In</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        
+            <!-- header main -->
+            <div class="header-main container">
+                <a href="./">
+                    <img src="../resources/logo/white-logo.png" id="logo" class="cursor-hand"></img>
+                </a>
+        
+                <div id="search-bar">
+                    <div>
+                        <input type="text" id="search-box" placeholder="Search in Aurel">
+                        <button id="search-button" class="material-icons vertical-center">search
+        
+                        </button>
+                    </div>
+                </div>
+        
+                <div id="cart">
+                    <div>
+                        <button id="cart-button" class="material-icons cursor-hand hover-change-back"> shopping_cart
+        
+                        </button>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <!--  bar -->
+        
+            <div class="tit-bar">
+        
+            </div>
+        
+        
+        </div>
+        <div class="main-body">
+            <div class="container head-body">
     
-            <div id="cart">
-                <div>
-                    <button id="cart-button" class="material-icons cursor-hand hover-change-back"> shopping_cart
+                <!-- navigation -->
+                <div class="navigation">
+                    <ul style="z-index: 2">
+                        <li >
+                            <a href="" >
+                                <span>
+                                    <i class="material-icons"> laptop</i>
+                                </span>
+                                <span>Laptop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons"> desktop_windows</i>
+                                </span>
+                                <span>Desktop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons"> smartphone</i>
+                                </span>
+                                <span>Smart Phone</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons"> tablet_mac</i>
+                                </span>
+                                <span>Tablet</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons"> watch</i>
+                                </span>
+                                <span>Smart Watch</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons">headset </i>
+                                </span>
+                                <span>Head Phone</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>
+                                    <i class="material-icons"> devices_other</i>
+                                </span>
+                                <span>Other</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Banner -->
+                <div class="home-banner">
+                    <div class="main-banner">
+                        <img src="../resources/banner/main-baner01.jpg" />
+                        <div class="main-banner-switch">
+                            <ul>
+                                <li>
+                                    <i class="material-icons"> fiber_manual_record </i>
+                                </li>
+                                <li>
+                                    <i class="material-icons"> panorama_fish_eye </i>
+                                </li>
+                                <li>
+                                    <i class="material-icons"> panorama_fish_eye </i>
+                                </li>
+                                <li>
+                                    <i class="material-icons"> panorama_fish_eye </i>
+                                </li>
+                            </ul>
+                        </div>
     
-                    </button>
+                    </div>
+                    <div class="second-banner">
+                        <div class="second-banner-1">
+    
+                        </div>
+                        <div class="second-banner-2">
+    
+                        </div>
+                        <div class="second-banner-3">
+    
+                        </div>
+                    </div>
+    
                 </div>
             </div>
-    
         </div>
-    
-        <!--  bar -->
-    
-        <div class="tit-bar">
-    
-        </div>
-    
-    
     </div>
-    <div class="main-body">
-        <div class="container head-body">
-
-            <!-- navigation -->
-            <div class="navigation">
-                <ul style="z-index: 2">
-                    <li >
-                        <a href="" >
-                            <span>
-                                <i class="material-icons"> laptop</i>
-                            </span>
-                            <span>Laptop</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons"> desktop_windows</i>
-                            </span>
-                            <span>Desktop</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons"> smartphone</i>
-                            </span>
-                            <span>Smart Phone</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons"> tablet_mac</i>
-                            </span>
-                            <span>Tablet</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons"> watch</i>
-                            </span>
-                            <span>Smart Watch</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons">headset </i>
-                            </span>
-                            <span>Head Phone</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span>
-                                <i class="material-icons"> devices_other</i>
-                            </span>
-                            <span>Other</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Banner -->
-            <div class="home-banner">
-                <div class="main-banner">
-                    <div class="main-banner-switch">
-                        <ul>
-                            <li>
-                                <i class="material-icons"> fiber_manual_record </i>
-                            </li>
-                            <li>
-                                <i class="material-icons"> panorama_fish_eye </i>
-                            </li>
-                            <li>
-                                <i class="material-icons"> panorama_fish_eye </i>
-                            </li>
-                            <li>
-                                <i class="material-icons"> panorama_fish_eye </i>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="second-banner">
-                    <div class="second-banner-1">
-
-                    </div>
-                    <div class="second-banner-2">
-
-                    </div>
-                    <div class="second-banner-3">
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    <script type="text/javascript" src="app/background/background.js"> </script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function(){
+                document.getElementById('root').style.display='block';    
+            },0);
+            
+        });
+    </script>
+{{test}}
 </body>
 
 </html>
