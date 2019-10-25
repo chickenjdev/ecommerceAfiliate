@@ -16,9 +16,12 @@ const config = {
                 test: /\.(png|ttf|svg|jpg|jpeg)$/,
                 loader: ['url-loader']
             }
-        
+
 
         ]
+    },
+    devServer: {
+        contentBase: '../app/background'
     }
 
 }
