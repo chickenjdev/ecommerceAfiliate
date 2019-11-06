@@ -1,8 +1,9 @@
+require('dotenv/config');
 const http = require('http');
 
 const app = require('./app');
-const port = process.env.PORT || 3000;
+var PORT =  process.env.PORT || 3000 ;
 
 const server = http.createServer(app);
 
-server.listen(port,"127.0.0.2");
+server.listen(PORT,process.env.HOST);

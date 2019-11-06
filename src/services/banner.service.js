@@ -1,4 +1,6 @@
-angular.module('ecomApp',[]).controller('BannerService',BannerService);
+require('../init');
+angular.module('ecomApp')
+.controller('BannerService',BannerService);
 
 BannerService.$inject = ['$scope'];
 

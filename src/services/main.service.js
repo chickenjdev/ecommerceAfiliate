@@ -5,6 +5,6 @@ angular.module('ecomApp')
 
 MainService.$inject = ['$scope'];
 
-function BannerService($scope){
+function MainService($scope){
     $scope.testService = 'hello';
 }
