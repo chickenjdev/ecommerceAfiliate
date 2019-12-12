@@ -1,7 +1,5 @@
 import 'angular';
 
-import './stylesheets/product.css';
-import './stylesheets/desktop.css';
 import './stylesheets/component.css';
 import './stylesheets/main.css';
 
