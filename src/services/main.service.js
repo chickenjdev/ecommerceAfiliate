@@ -1,10 +1,15 @@
 
 require('../init');
 angular.module('ecomApp')
-.controller('MainService',MainService);
+.factory('MainService',MainService);
 
-MainService.$inject = ['$scope'];
+MainService.$inject = [];
 
-function MainService($scope){
-    $scope.testService = 'hello';
+function MainService(){
+    var testService = 'hello o so ke';
+    function getTest() {
+        return testService;
+    }
+    return getTest ;
+        
 }

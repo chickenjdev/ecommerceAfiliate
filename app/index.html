@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aurel</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/node_modules/material-icons/iconfont/material-icons.css">
 
 </head>
 
@@ -16,9 +16,8 @@
         <section>
             <div ng-include src="'app/components/header.html'"></div>
         </section>
-
-        <div class="main-body">
-            <div class="container head-body">
+        <div class="_main-body">
+            <div class="_container head-body">
                 <!-- navigation -->
                 <section>
                     <div ng-include src="'app/components/navigation.html'"></div>
@@ -26,27 +25,29 @@
 
                 <!-- Banner -->
                 <section>
-                    <div ng-include src="'app/components/homeBanner.html'" 
-                    ng-controller="BannerController">
+                    <div ng-include src="'app/components/homeBanner.html'" ng-controller="BannerController">
                     </div>
 
                 </section>
 
                 <!-- Brand Category -->
                 <section>
-                    <div ng-include src= "'app/components/brandCategory.html'"
-                    ng-controller="BrandCategoryController">
+                    <div ng-include src="'app/components/brandCategory.html'" ng-controller="BrandCategoryController">
 
                     </div>
                 </section>
 
                 <section>
-                    <div ng-include src= "'app/components/saleBoard.html'"
-                    ng-controller="SaleBoardController">
-                    
+                    <div ng-include src="'app/components/saleBoard.html'" ng-controller="SaleBoardController">
+
                     </div>
                 </section>
-
+                <section>
+                    <div ng-include src="'app/components/topTrend.html'" ng-controller='TopTrendController'></div>
+                </section>
+                <div class=" p-3 text-center bg-black">
+                    alo
+                </div>
             </div>
         </div>
     </div>

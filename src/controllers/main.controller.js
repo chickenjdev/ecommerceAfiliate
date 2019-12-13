@@ -4,11 +4,11 @@ require('../init');
 angular.module('ecomApp')
     .controller('MainController',MainController);
 
-MainController.$inject = ['$scope'];
+MainController.$inject = ['$scope','MainService'];
 
-function MainController($scope){
-    $scope.test = 'hello';
-    // $scope.testServcie = MainService.testServcie;
+function MainController($scope, MainService){
+    $scope.testServcie = MainService.getTest;
+
 }
 
 

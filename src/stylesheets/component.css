@@ -1,4 +1,4 @@
-.header .tit-bar {
+._header .tit-bar {
     height: 25%;
     width: 100%;
     position: static;
@@ -6,13 +6,13 @@
    
 }
 
-.header .tit-bar .tit-bar-container {
+._header .tit-bar .tit-bar-container {
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.header .tit-bar .tit-bar-container .tit-bar-options {
+._header .tit-bar .tit-bar-container .tit-bar-options {
     width: 30%;
     height: 100%;
     float: right;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.header .tit-bar .tit-bar-container .tit-bar-options li {
+._header .tit-bar .tit-bar-container .tit-bar-options li {
     position: relative;
     width: 33.33%;
     height: 100%;
@@ -170,7 +170,7 @@
     border-color:rgba(132, 55, 255, 0.705);
 }
 
-.navigation {
+._navigation {
     background-color: white;
     width: 22%;
     float : left;
@@ -179,14 +179,14 @@
     border-style: solid;
     border-radius: 2px 0px 0px 2px;
 }
-.navigation ul{
+._navigation ul{
     margin-top : auto;
     margin-bottom: auto;
     padding-left : 0;
     
 }
 
-.navigation li{
+._navigation li{
     /* width: 100%; */
     text-align: -webkit-match-parent;
     list-style: none;
@@ -194,13 +194,13 @@
     height: 50px;
     
 }
-.navigation li:hover  {
+._navigation li:hover  {
     background: rgb(153,58,180);
     background: linear-gradient(75deg, rgb(33, 137, 255) 0%, rgba(69,183,252,1) 100%, rgba(29,236,253,1) 100%);
   
 }
 
-.navigation li:hover > a::before{
+._navigation li:hover > a::before{
 
     display : block;
     content: "";
@@ -217,12 +217,12 @@
     z-index: 999 ;
 
 }
-.navigation li:hover a  {
+._navigation li:hover a  {
     
     color: rgb(255, 255, 255);
 }
 
-.navigation li a{
+._navigation li a{
     
     text-decoration: none;
     color: rgb(95, 94, 94);
@@ -231,7 +231,7 @@
     position: relative;
     z-index : 2;    
 }
-.navigation li span {
+._navigation li span {
 
     font-size: 16px;
     margin-top: auto;
@@ -240,7 +240,7 @@
     white-space:nowrap;
     
 }
-.navigation li i {
+._navigation li i {
 
     display: flex;
     width: 30px;

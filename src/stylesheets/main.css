@@ -50,16 +50,16 @@ body {
     height: 100%;
     width: 100%;
 }
-body .main-body {
+body ._main-body {
     padding-top: 20px;
 }
-.container {
+._container {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.header {
+._header {
    
     background: rgb(17, 158, 252);
     background: linear-gradient(75deg, rgb(135, 53, 211) 0%, rgba(69,183,252,1) 100%, rgba(29,236,253,1) 100%);
@@ -71,12 +71,10 @@ body .main-body {
 
 .text-center {
     text-align: center;
-
 }
 
 .vertical-center {
     vertical-align: middle;
-
 }
 
 .item-center {
