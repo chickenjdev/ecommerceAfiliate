@@ -43,13 +43,20 @@
                     </div>
                 </section>
                 <section>
+                    <div ng-include src="'app/components/visited.html'" ng-controller='VisitedController'></div>
+                </section>
+                <section>
                     <div ng-include src="'app/components/topTrend.html'" ng-controller='TopTrendController'></div>
                 </section>
                 <div class=" p-3 text-center bg-black">
-                    alo
                 </div>
             </div>
         </div>
+        <section>
+            <div ng-include src="'app/components/footer.html'">
+                hell
+            </div>
+        </section>
     </div>
 
     <script type="text/javascript" src="app/background/background.js"> </script>

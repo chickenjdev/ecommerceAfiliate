@@ -3,6 +3,7 @@ import 'angular';
 // import 'material-icons/iconfont/material-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './stylesheets/image.css'
+import './stylesheets/product.css';
 import './stylesheets/component.css';
 import './stylesheets/main.css';
 
@@ -14,6 +15,7 @@ import './controllers/banner.controller.js';
 import './controllers/brandCategory.controller.js'
 import './controllers/saleBoard.controller.js'
 import './controllers/topTrend.controller.js'
+import './controllers/visited.controller'
 
 import './controllers/products.controller.js'
 
