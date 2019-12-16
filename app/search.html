@@ -11,19 +11,14 @@
 
 </head>
 
-<body ng-app='ecomApp' ng-controller='ProductsController'>
+<body ng-app='ecomApp' ng-controller='SearchController'>
     <div id="root">
         <section>
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
-            <section>
-                <div ng-include src="'../app/components/productDetail.html'"></div>
-            </section>
-            <section>
-                <div ng-include src="'../app/components/visited.html'" ng-controller='SearchController'></div>
-            </section>
-            </div>
+        </div>
+        {{testServcie}} hi
         <section>
             <div ng-include src="'../app/components/footer.html'"></div>
         </section>

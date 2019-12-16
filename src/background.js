@@ -18,4 +18,6 @@ import './controllers/topTrend.controller.js'
 import './controllers/visited.controller'
 
 import './controllers/products.controller.js'
+import './controllers/search.controller.js';
+
 

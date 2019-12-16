@@ -12,20 +12,12 @@ var data= [
 var jsonData = JSON.stringify(data);
 
 router.get('/:id', (req, res, next) => {
-    console.log(req.params.id);
-    res.render(path.join(__dirname, '../../app/', 'products.html'), 
-    {
-        layout: false,
-        test: jsonData,
-        quote: 'ss'
-    });
-    // res.render('view/products', {test : req.params.id});
-})
-router.get('/phone/:id', (req, res, next) => {
     res.render(path.join(__dirname, '../../app/', 'search.html'),{
         layout: false,
         test: 'toi dday',
-        quote: 'ss'
+        quote: 'ss',
+        data : jsonData
+        
     });
     console.log('phone route')
 })
