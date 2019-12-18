@@ -689,3 +689,8 @@ a.socialIcon:hover, .socialHoverClass {
       opacity: 1;
       -webkit-transform: scale(1);
               transform: scale(1); } }
+.coupon-input:focus {
+  border-color: none ;
+  box-shadow: none;
+  outline : 0 none;
+}

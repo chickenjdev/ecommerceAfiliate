@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Search</title>
 
+    <script type="text/javascript" src="../app/background/background.js"> </script>
+
     <link rel="stylesheet" href="/node_modules/material-icons/iconfont/material-icons.css">
 
 </head>
@@ -17,13 +19,26 @@
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
+            <div ng-init="getData('{{data}}')">
+                <div ng-repeat='item in {{data}}'>
+                    So thu tu : item
+                </div>
+            </div>
         </div>
-        {{testServcie}} hi
+        <ul ng-init=" 
+        students = [  
+                     {name: 'demo.dannguyen.net@gmail.com', age: 26, gender: 'boy'},  
+                     {name: 'dannguyen.net', age: 30, gender: 'boy'},  
+                     {name: 'Lan', age: 28, gender: 'girl'},   
+                   ] ">
+            <li ng-repeat="student in students">
+                as: {{ student.name }}, a {{ student.age }}, o: {{student.gender}}
+            </li>
+        </ul>
         <section>
             <div ng-include src="'../app/components/footer.html'"></div>
         </section>
     </div>
-    <script type="text/javascript" src="../app/background/background.js"> </script>
 </body>
 
 </html>

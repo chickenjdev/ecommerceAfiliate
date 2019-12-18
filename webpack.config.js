@@ -1,9 +1,12 @@
 const path = require('path');
 
 const config = {
-    entry: './src/background.js',
+    entry: {
+        background : './src/background.js',
+        login : './src/login.js'
+    }, 
     output: {
-        filename: 'background.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, "./app/background")
     },
     module: {
