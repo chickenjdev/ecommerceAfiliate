@@ -13,15 +13,16 @@
 
 </head>
 
-<body ng-app='ecomApp' ng-controller='SearchController'>
-    <div id="root">
+<body ng-app='ecomApp' >
+
+    <div id="root" ng-controller='SearchController'>
         <section>
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
             <div ng-init="getData('{{data}}')">
                 <div ng-repeat='item in {{data}}'>
-                    So thu tu : item
+                    {{data}}
                 </div>
             </div>
         </div>
@@ -32,8 +33,11 @@
                      {name: 'Lan', age: 28, gender: 'girl'},   
                    ] ">
             <li ng-repeat="student in students">
-                as: {{ student.name }}, a {{ student.age }}, o: {{student.gender}}
+                <div ng-include src="'../app/components/item.html'">
+
+                </div>
             </li>
+            data {//testServcie//}
         </ul>
         <section>
             <div ng-include src="'../app/components/footer.html'"></div>

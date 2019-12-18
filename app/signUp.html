@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -66,4 +66,36 @@
 
 </body>
 
+</html> -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-custom-interpolation-markup-production</title>
+  
+
+  <!-- <script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
+  <script src="../node_modules/angular/angular.min.js"></script>
+
+  
+</head>
+<body ng-app="ecomApp">
+  <script>
+  var customInterpolationApp = angular.module('ecomApp', []);
+
+  customInterpolationApp.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{//');
+    $interpolateProvider.endSymbol('//}');
+  });
+
+
+  customInterpolationApp.controller('DemoController', function($scope) {
+      $scope.label = "This binding is brought you by // interpolation symbols.";
+  });
+</script>
+<div ng-controller="DemoController">
+    {{data}}
+    {//label//}
+</div>
+</body>
 </html>

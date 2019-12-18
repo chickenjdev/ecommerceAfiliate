@@ -1,1 +1,5 @@
-angular.module('ecomApp',[]);
+angular.module('ecomApp',[])
+.config(['$interpolateProvider',function ($interpolateProvider) {
+    $interpolateProvider.startSymbol('{//');
+    $interpolateProvider.endSymbol('//}');
+}]);
