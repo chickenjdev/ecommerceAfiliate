@@ -1,18 +1,20 @@
 ._sale-item-col {
-    max-width: 260px;
-    padding : 5px 2px 0px 2px;
+    max-width: 280px;
+    padding : 5px 2px 5px 2px;
 }
 ._sale-item {
     padding: 15px 20px;
     cursor: pointer;
     min-height: 300px;
-    max-width: 246px;
-    margin: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
 }
 ._sale-item:hover {
     box-shadow: 0px 0px 20px 3px rgba(145,145,145,0.64);
 }
 ._item-name {
+    margin-right: 0;
     font-weight: 50;
     font-size: 15px;
     color: rgb(138, 138, 138);;

@@ -13,36 +13,25 @@
 
 </head>
 
-<body ng-app='ecomApp' >
+<body ng-app='ecomApp'>
 
     <div id="root" ng-controller='SearchController'>
         <section>
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
-            <div ng-init="getData('{{data}}')">
-                <div ng-repeat='item in {{data}}'>
-                    {{data}}
+            <div class="row text-center bg-white" >
+                <div ng-repeat="item in {{data}}">
+                    <div class="_sale-item-col col " ng-include src="'../app/components/item.html'">
+                    </div>
                 </div>
             </div>
         </div>
-        <ul ng-init=" 
-        students = [  
-                     {name: 'demo.dannguyen.net@gmail.com', age: 26, gender: 'boy'},  
-                     {name: 'dannguyen.net', age: 30, gender: 'boy'},  
-                     {name: 'Lan', age: 28, gender: 'girl'},   
-                   ] ">
-            <li ng-repeat="student in students">
-                <div ng-include src="'../app/components/item.html'">
-
-                </div>
-            </li>
-            data {//testServcie//}
-        </ul>
-        <section>
-            <div ng-include src="'../app/components/footer.html'"></div>
-        </section>
-    </div>
+        <div>
+            <section>
+                <div ng-include src="'../app/components/footer.html'"></div>
+            </section>
+        </div>
 </body>
 
 </html>
