@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="/node_modules/material-icons/iconfont/material-icons.css">
 </head>
 
-<body ng-app='ecomApp' ng-controller='LoginController'>
+<body ng-app='ecomApp' ng-controller='SignUpController'>
     <div id="root" style="display: none;">
+        <section>
+            <div ng-include src="'../app/components/header.html'"></div>
+        </section>
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
@@ -22,18 +25,18 @@
                     <form class="login100-form validate-form">
                         <div class="wrap-input100 validate-input mb-2" data-validate="Username is required">
                             <span class="label-input100">Tên</span>
-                            <input class="input100" type="text" name="name" placeholder="Nhập họ và tên">
+                            <input class="input100" type="text" placeholder="Nhập họ và tên" ng-model="data.name">
                             <span class="focus-input100"></span>
                         </div>
                         <div class="wrap-input100 validate-input mb-2" data-validate="Username is required">
                             <span class="label-input100">Tài khoản</span>
-                            <input class="input100" type="text" name="username" placeholder="Nhập tài khoản">
+                            <input class="input100" type="text"  placeholder="Nhập tài khoản" ng-model="data.user_id">
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input mb-2" data-validate="Password is required">
                             <span class="label-input100">Mật khẩu</span>
-                            <input class="input100" type="password" name="pass" placeholder="Nhập mật khẩu">
+                            <input class="input100" type="password" name="pass" placeholder="Nhập mật khẩu" ng-model="data.password">
                             <span class="focus-input100"></span>
                         </div>
                         <div class="wrap-input100 validate-input mb-2" data-validate="Password is required">
@@ -45,7 +48,7 @@
 
 
                         <div class="container-login100-form-btn pt-4">
-                            <button class="login100-form-btn">
+                            <button class="login100-form-btn" ng-click = 'createUser()'>
                                 Đăng ký
                             </button>
                         </div>
@@ -66,36 +69,4 @@
 
 </body>
 
-</html> -->
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example - example-custom-interpolation-markup-production</title>
-  
-
-  <!-- <script src="//code.angularjs.org/snapshot/angular.min.js"></script> -->
-  <script src="../node_modules/angular/angular.min.js"></script>
-
-  
-</head>
-<body ng-app="ecomApp">
-  <script>
-  var customInterpolationApp = angular.module('ecomApp', []);
-
-  customInterpolationApp.config(function($interpolateProvider) {
-    $interpolateProvider.startSymbol('{//');
-    $interpolateProvider.endSymbol('//}');
-  });
-
-
-  customInterpolationApp.controller('DemoController', function($scope) {
-      $scope.label = "This binding is brought you by // interpolation symbols.";
-  });
-</script>
-<div ng-controller="DemoController">
-    {{data}}
-    {//label//}
-</div>
-</body>
 </html>

@@ -18,7 +18,7 @@
         </section>
         <div class="_container">
             <section>
-                <div ng-include src="'../app/components/productDetail.html'"></div>
+                <div ng-include src="'../app/components/productDetail.html'" ng-init="product = {{data}}"></div>
             </section>
             <section>
                 <div ng-include src="'../app/components/visited.html'" ng-controller='VisitedController'></div>

@@ -1,28 +1,25 @@
 const express = require('express');
-
 const router = express.Router();
-
 const path = require('path');
-
-var data= [
-    {id:1},
-    {id:2},
-    {id:3}
-]
-var jsonData = JSON.stringify(data);
+const connection = require('../api/sql')
 
 router.get('/:id', (req, res, next) => {
     console.log(req.params.id);
-    res.render(path.join(__dirname, '../../app/', 'products.html'), 
-    {
-        layout: false,
-        test: jsonData,
-        quote: 'ss'
+    connection.query('SELECT * FROM Product WHERE product_id = "'+req.params.id+'"' , function (err, result) {
+        // if (err) throw err;
+        console.log(result);
+        if(result.length!==0){
+            res.render(path.join(__dirname, '../../app/', 'products.html'),{
+                layout: false,
+                data: JSON.stringify(result[0])
+            });
+        }else
+            res.redirect('../../')
     });
     // res.render('view/products', {test : req.params.id});
 })
 router.get('/phone/:id', (req, res, next) => {
-    res.render(path.join(__dirname, '../../app/', 'search.html'),{
+    res.render(path.join(__dirname, '../../app/', 'search.html'), {
         layout: false,
         test: 'toi dday',
         quote: 'ss'

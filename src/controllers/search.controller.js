@@ -1,14 +1,7 @@
 /* global angular */
 require('../init');
 
-var customInterpolationApp = angular.module('ecomApp');
-
-// customInterpolationApp.config(['$interpolateProvider',function ($interpolateProvider) {
-//     $interpolateProvider.startSymbol('{//');
-//     $interpolateProvider.endSymbol('//}');
-// }]);
-
-customInterpolationApp.controller('SearchController', SearchController);
+angular.module('ecomApp').controller('SearchController', SearchController);
 
 SearchController.$inject = ['$scope'];
 

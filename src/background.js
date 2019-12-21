@@ -8,7 +8,7 @@ import './stylesheets/component.css';
 import './stylesheets/main.css';
 
 import './services/main.service.js';
-import './services/banner.service';
+// import './services/banner.service.js';
 
 import './controllers/main.controller.js';
 import './controllers/banner.controller.js';

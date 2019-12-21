@@ -8,21 +8,10 @@
   
   body, html {
       height: 100%;
-      font-family: 'Courier New', Courier, monospace, sans-serif;
   }
   
   /*---------------------------------------------*/
-  a {
-      font-family: 'Courier New', Courier, monospace, sans-serif;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #666666;
-      margin: 0px;
-      transition: all 0.4s;
-      -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-  }
+  
   
   a:focus {
       outline: none !important;
@@ -39,7 +28,7 @@
   }
   
   p {
-      font-family: 'Courier New', Courier, monospace, sans-serif;
+ 
       font-size: 14px;
       line-height: 1.7;
       color: #666666;
@@ -159,7 +148,7 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: auto;
   }
   
@@ -187,7 +176,7 @@
   }
   
   .login100-form-title-1 {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+   
     font-size: 30px;
     color: #fff;
     text-transform: uppercase;
@@ -234,7 +223,7 @@
   }
   
   .label-input100 {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+
     font-size: 15px;
     color: #808080;
     line-height: 1.8;
@@ -249,7 +238,7 @@
   
   /*---------------------------------------------*/
   .input100 {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+
     font-size: 15px;
     color: #555555;
     line-height: 1.2;
@@ -307,11 +296,11 @@
   
   .input-checkbox100 {
     display: none;
-    font-family: Arial, Helvetica, sans-serif;
+
   }
   
   .label-checkbox100 {
-    font-family: Arial, Helvetica, sans-serif;
+
     font-size: 13px;
     color: #999999;
     line-height: 1.4;
@@ -377,8 +366,7 @@
     height: 50px;
     background-color: #0085f1;
     border-radius: 25px;
-  
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -443,7 +431,7 @@
     right: 2px;
     pointer-events: none;
   
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -460,7 +448,7 @@
   
   .alert-validate::after {
     content: "\f06a";
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+
     display: block;
     position: absolute;
     color: #c80000;

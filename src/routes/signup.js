@@ -12,8 +12,6 @@ var data= [
 var jsonData = JSON.stringify(data);
 
 router.get('/', (req, res, next) => {
-    // console.log(req.params.id);
-    // res.sendFile( path.join(__dirname, '../../app/', 'signUp.html'));
     res.render(path.join(__dirname, '../../app/', 'signUp.html'),{
         layout: false,
         test: 'toi dday',
@@ -21,7 +19,7 @@ router.get('/', (req, res, next) => {
         data : jsonData
         
     });
-    // res.render('view/products', {test : req.params.id});
 })
+
 
 module.exports = router;

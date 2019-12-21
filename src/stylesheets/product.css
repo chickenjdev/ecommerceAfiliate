@@ -1,5 +1,5 @@
 ._sale-item-col {
-    max-width: 280px;
+    max-width: 320px;
     padding : 5px 2px 5px 2px;
 }
 ._sale-item {
@@ -20,12 +20,19 @@
     color: rgb(138, 138, 138);;
 }
 ._item-discount {
-    font-size: 12px;
+    color: rgb(233, 84, 58);
+    font-weight: 150;
+    font-style: bold;
+    line-height: 2;
 }
 ._item-f-price {
     color: rgb(146, 144, 144);
-    font-weight:40;
+    font-weight:150;
     font-size: 15px;
+}
+._item-price {
+    font-weight:200;
+    font-size: 20px;
 }
 ._item-sold-quant {
     color: rgb(160, 160, 160);
@@ -33,14 +40,16 @@
     font-size: 12px;
 }
 ._item-name {
+    font-family: "Montserrat Light";
     max-height: 55px;
+    min-height: 55px;
     width: 100%;
     height: auto;
     overflow: hidden;
     text-overflow: ellipsis; 
     line-height: 1.54;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 100;
     color: black;
     font-style: normal;
     font-stretch: normal;
