@@ -7,9 +7,9 @@ require('../init');
     angular.module('ecomApp')
         .factory('UserService', UserService);
 
-    UserService.$inject = ['$http'];
+    UserService.$inject = ['$http','$window'];
 
-    function UserService($http) {
+    function UserService($http,$window) {
 
         function createUser(data) {
             var data = data;
@@ -24,6 +24,9 @@ require('../init');
             var data = data;
             $http.post(apiList.urlLoginUser, JSON.stringify(data)).then(function (result) {
                 console.log(result);
+                if(result.data.code == 210){
+                    $window.location.href = '/';
+                }
             }, function (error) {
                 console.log(error);
             });

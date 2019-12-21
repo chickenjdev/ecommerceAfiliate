@@ -4,10 +4,17 @@ const router = express.Router();
 
 const path = require('path');
 
-router.get('/', (req, res, next) => {
-    // console.log(req.params.id);
+var sessionChecker = (req, res, next) => {
+    if (req.session.user && req.cookies.user_sid) {
+        console.log('ban da dang nhap - Redirect')
+        res.redirect('/');
+    } else {
+        next();
+    }    
+};
+
+router.get('/',sessionChecker, (req, res, next) => {
     res.sendFile( path.join(__dirname, '../../app/', 'login.html'));
-    // res.render('view/products', {test : req.params.id});
 })
 
 module.exports = router;

@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
-var exphbs  = require('express-handlebars');
+const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 
 const routeLogin = require('./src/routes/login');
@@ -17,6 +19,24 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 app.use(bodyParser.json())
+app.use(cookieParser());
+app.use(session({
+  key: 'user_sid',
+  secret: 'somerandonstuffs',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+      expires: 600000
+  }
+}));
+
+// clear cookie
+app.use((req, res, next) => {
+  if (req.cookies.user_sid && !req.session.user) {
+      res.clearCookie('user_sid');        
+  }
+  next();
+});
 
 app.engine(
   "html",
