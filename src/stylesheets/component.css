@@ -50,7 +50,9 @@
 }
 
 .tit-bar-options li span {
-
+    width: 65px;
+    height: 25px;
+    overflow: hidden;
     display: inline-block;
     margin-top:5%;
     margin-bottom: 5%;

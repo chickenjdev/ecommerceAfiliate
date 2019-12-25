@@ -17,4 +17,5 @@ router.get('/',sessionChecker, (req, res, next) => {
     res.sendFile( path.join(__dirname, '../../app/', 'login.html'));
 })
 
+
 module.exports = router;

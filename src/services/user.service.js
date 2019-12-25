@@ -7,9 +7,9 @@ require('../init');
     angular.module('ecomApp')
         .factory('UserService', UserService);
 
-    UserService.$inject = ['$http','$window'];
+    UserService.$inject = ['$rootScope','$http','$window'];
 
-    function UserService($http,$window) {
+    function UserService($rootScope,$http,$window) {
 
         function createUser(data) {
             var data = data;

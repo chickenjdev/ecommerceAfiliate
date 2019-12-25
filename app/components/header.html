@@ -10,16 +10,21 @@
                         </a>
     
                     </li>
-                    <li class="vertical-center ">
-                        <a href='/sign-up' id="sign-up">
-                            <i class="material-icons vertical-center ">person</i>
-                            <span class="vertical-center ">Sign Up</span>
+                    <li class="vertical-center " >
+                        <a ng-if = '!isLogged' href='/sign-up' id="sign-up">
+                            <i ng-if = '!isLogged' class="material-icons vertical-center ">person</i>
+                            <span ng-if = '!isLogged' class="vertical-center ">Sign Up</span>
+                        </a>
+                        <a ng-if = 'isLogged' href='/api/user/logout' id="sign-up" ng-click="logOut()">
+                            <i ng-if = 'isLogged' class="material-icons vertical-center ">exit_to_app</i>
+                            <span ng-if = 'isLogged' class="vertical-center ">Log out</span>
                         </a>
                     </li>
                     <li class="vertical-center ">
                         <a href ='/login' id="login">
                             <i class="material-icons vertical-center">account_circle</i>
-                            <span class="vertical-center ">Log In</span>
+                            <span ng-show="!isLogged" class="vertical-center ">Log In</span>
+                            <span ng-show="isLogged" class="vertical-center ">{//name//}</span>
                         </a>
                     </li>
                 </ul>
@@ -40,10 +45,9 @@
                     </button>
                 </div> -->
             </div>
-    
-            <div id="cart">
+            <div id="cart" ng-if="isLogged" ng-controller = "CartController">
                 <div>
-                    <button id="cart-button" class="material-icons cursor-hand hover-change-back"> shopping_cart
+                    <button id="cart-button" class="material-icons cursor-hand hover-change-back" ng-click="goToCart()"> shopping_cart
     
                     </button>
                 </div>
