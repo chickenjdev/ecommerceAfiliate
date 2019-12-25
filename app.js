@@ -14,7 +14,7 @@ const routeSearch = require('./src/routes/search');
 const routeAddToCart = require('./src/routes/AddToCart');
 
 const api = require('./src/api/api');
-const admin = require('./src/admin/admin')
+const admin = require('./src/admin/admin');
 
 const app = express();
 app.use(bodyParser.urlencoded({
