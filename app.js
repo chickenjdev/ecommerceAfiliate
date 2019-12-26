@@ -28,7 +28,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        expires: 600000
+        
     }
 }));
 
@@ -38,6 +38,7 @@ app.use((req, res, next) => {
         res.clearCookie('user_sid');
         res.cookie("login", 0);
         res.cookie("user", '');
+        res.cookie("userx", '');
     }
     next();
 });

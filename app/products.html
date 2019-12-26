@@ -11,14 +11,14 @@
 
 </head>
 
-<body ng-app='ecomApp' ng-controller='ProductsController'>
-    <div id="root">
+<body ng-app='ecomApp' ng-controller="SessionController">
+    <div id="root" ng-controller='ProductsController'>
         <section>
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
             <section>
-                <div ng-include src="'../app/components/productDetail.html'" ng-init="product = {{data}}"></div>
+                <div ng-include src="'../app/components/productDetail.html'" ng-init="init([{{data}},{{options}}])"></div>
             </section>
             <section>
                 <div ng-include src="'../app/components/visited.html'" ng-controller='VisitedController'></div>

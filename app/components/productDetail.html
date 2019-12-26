@@ -1,61 +1,74 @@
 <div class="rounded">
-		<div class="card bg-white ">
-			<div class="container-fliud">
-				<div class="wrapper row">
-					<div class="preview col-md-6">
-						<div class="row">
-							<ul class="preview-thumbnail nav nav-tabs col-sm-2">
-								<li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../../resources/logo/phone.jpg" /></a></li>
-								<li><a data-target="#pic-2" data-toggle="tab"><img src="../../resources/logo/phone.jpg" /></a></li>
-								<li><a data-target="#pic-3" data-toggle="tab"><img src="../../resources/logo/phone.jpg" /></a></li>
-							  </ul>
-							<div class="preview-pic tab-content col-sm-6">
-							  <div class="tab-pane active" id="pic-1"><img src="../../resources/logo/phone.jpg" /></div>
-							  <div class="tab-pane" id="pic-2"><img src="../../resources/logo/phone.jpg" /></div>
-							  <div class="tab-pane" id="pic-3"><img src="../../resources/logo/phone.jpg" /></div>
-							  <div class="tab-pane" id="pic-4"><img src="../../resources/logo/phone.jpg" /></div>
-							  <div class="tab-pane" id="pic-5"><img src="../../resources/logo/phone.jpg" /></div>
-							</div>
+	<div class="card bg-white ">
+		<div class="container-fliud">
+			<div class="wrapper row">
+				<div class="preview col-md-6">
+					<div class="row">
+						<ul class="preview-thumbnail nav nav-tabs col-sm-2">
+							<li class="active"><a data-target="#pic-1" data-toggle="tab"><img
+										src={//product.src_image//} /></a></li>
+							<li><a data-target="#pic-2" data-toggle="tab"><img
+										src={//product.src_image//} /></a></li>
+							<li><a data-target="#pic-3" data-toggle="tab"><img
+										src={//product.src_image//} /></a></li>
+						</ul>
+						<div class="preview-pic tab-content col-sm-6">
+							<div class="tab-pane active" id="pic-1"><img src={//product.src_image//} /></div>
+							<div class="tab-pane" id="pic-2"><img src="../../resources/logo/phone.jpg" /></div>
+							<div class="tab-pane" id="pic-3"><img src="../../resources/logo/phone.jpg" /></div>
+							<div class="tab-pane" id="pic-4"><img src="../../resources/logo/phone.jpg" /></div>
+							<div class="tab-pane" id="pic-5"><img src="../../resources/logo/phone.jpg" /></div>
 						</div>
-						
-						
 					</div>
-					<div class="details col-md-6">
-						<h3 class="product-title">{//product.name//}</h3>
-						<div class="rating">
-							<div class="stars">
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-							<span class="review-no">41 reviews</span>
-						</div>
-						<p class="product-description">{//product.general_info//} </p>
-						<h4 class="price">Giá: <span>{//product.price//}đ</span></h4>
-						<p class="vote"><strong></strong> {//product.description//} <strong></strong></p>
 
-						<h5 class="sizes">Tùy chọn:
-							
-						</h5>
-						<div class="d-flex pt-4">
-							<div class="input-spiner mr-5 mt-1">
-								<button class="text-center align-middle"> 
-								  –
-								</button>
-								<input class="text-center" type="number" id="quantity"
-								min="0" max="10" step="1" value="1">
-								<button class="text-center" > 
-								  +
-								</button>
-							  </div>
-							  <div class="action">
-								  <button id="button-addon" type="button" class="btn-addtocart btn btn-dark px-6 rounded-pill pt-3 pb-3">ADD TO CART</button>
-							  </div>
+
+				</div>
+				<span class="details col-md-6">
+					<h3 class="product-title">{//product.name//}</h3>
+					<div class="rating">
+						<div class="stars">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<span class="review-no">41 reviews</span>
+					</div>
+					<p class="product-description">{//product.general_info//} </p>
+					<h4 class="price">Giá: <span ng-modle="price">{//product.price//}đ</span></h4>
+					<p class="vote"><strong></strong> {//product.description//} <strong></strong></p>
+					<h5 class="sizes">Tùy chọn: <span ng-bind="option1"></span>
+
+						<div  class="d-flex pt-3">
+							<button id="button-addon" type="button" ng-repeat="option in options"
+								class="btn-choise btn-addtocart btn btn-dark px-6 rounded-pill pt-2 pb-2 mx-2" 
+								ng-click="optionChoise(option.product_detail_id,option.option1)">
+								{//option.option1//} 
+							</button>
+						</div>
+					</h5>
+					<div class="d-flex pt-4">
+						<div class="input-spiner mr-5 mt-1">
+							<button class="text-center align-middle" ng-click="updateQuant(-1)">
+								–
+							</button>
+							<input class="text-center" type="number" id="quantity" min="1" max="10" step="1" value="quantity" ng-model="quantity">
+							<button  class="text-center" ng-click="updateQuant(1)">
+								+
+							</button >
+						</div>
+						<div class="action">
+							<button id="button-addon" type="button"
+								class="btn-addtocart btn btn-dark px-6 rounded-pill pt-3 pb-3" 
+								ng-click="addToCart()">
+								ADD TO CART
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+</div>

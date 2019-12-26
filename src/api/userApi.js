@@ -44,9 +44,10 @@ router.post('/login', (req, res, next) => {
             if (result.length !== 0) {
                 console.log('user login successfully');
                 var userSess = JSON.parse(JSON.stringify(result))[0].user_id
-                req.session.user = userSess + 'aloha';
+                req.session.user = userSess + '';
                 res.cookie("login", 1);
                 res.cookie("user", JSON.parse(JSON.stringify(result))[0].name)
+                res.cookie("userx", JSON.parse(JSON.stringify(result))[0].user_id)
 
                 res.json({
                     code: '210',
@@ -65,36 +66,45 @@ router.get('/logout',(req,res,next) => {
     res.clearCookie('user_sid');
     res.cookie("login", 0);
     res.cookie("user", '');
+    res.cookie("userx", '');
     res.redirect("/login");
 })
 router.post('/add-address', (req, res, next) => {
 
-    let sql = `INSERT INTO Address(ID,address_id,user_id,full_name,address1,address2,postal_code,city,phone) VALUES ?`;
+    var sql1 = `UPDATE Address SET full_name = ?, address1 = ?,address2 = ?, city = ?, phone = ?  WHERE user_id="`+req.session.user+`"`
+    let sql2 = `INSERT INTO Address(ID,address_id,user_id,full_name,address1,address2,postal_code,city,phone) VALUES ?`;
     // var data = req.body;
     // console.log(req.body);
     var ID = req.body.ID;
-    var address_id = req.body.address_id;
-    var user_id = req.body.user_id;
+    var address_id = 1;
+    var user_id = req.session.user;
     var full_name = req.body.full_name;
     var address1 = req.body.address1;
     var address2 = req.body.address2;
-    var postal_code = req.body.postal_code;
+    var postal_code = "";
     var city = req.body.city;
     var phone = req.body.phone;
 
     console.log(req.body);
-    var value = [
-        [ID, address_id, user_id, full_name, address1, address2, postal_code, city, phone]
+    var value1 = [
+        [full_name, address1, address2, city, phone]
     ]
-    connection.query(sql, [value], (err, result) => {
+    connection.query(sql1, [value1], (err, result) => {
         if (err) {
             console.log(err)
-            res.json({
-                code: '400',
-                error: "Don't add Address!"
+            var value2 = [
+                [ID,address_id,user_id,full_name, address1, address2,postal_code ,city, phone]
+            ]
+            connection.query(sql2, [value2], (err, result) => {
+                if (err) {
+                    console.log(err)
+                } else if (result) {
+                    console.log('Insert Address successfully');
+                }
             })
+
         } else if (result) {
-            console.log('Add Address is successfully');
+            console.log('Change Address successfully');
             res.json({
                 code: '201',
                 message: "success!"
@@ -103,6 +113,8 @@ router.post('/add-address', (req, res, next) => {
     })
 
 })
+
+
 
 
 module.exports = router;

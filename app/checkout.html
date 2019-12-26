@@ -12,13 +12,13 @@
 </head>
 
 <body ng-app='ecomApp' ng-controller='SessionController'>
-    <div id="root" ng-controller='ProductsController'>
+    <div id="root" ng-controller='CartController'>
         <section>
             <div ng-include src="'../app/components/header.html'"></div>
         </section>
         <div class="_container">
             <section>
-                <div ng-include src="'../app/components/cart.html'"></div>
+                <div ng-include src="'../app/components/cart.html'" ng-init= "init([{{data}},{{userInfo}}])" ></div>
             </section>
             </div>
         <section>

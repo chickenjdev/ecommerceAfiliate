@@ -132,14 +132,15 @@ router.post('/add-product-detail', (req, res, next) => {
 
 router.post('/cart-to-cart', (req, res, next) => {
 
-    let sql = `INSERT INTO Cart(user_id,product_details) VALUES ?`;
+    let sql = `INSERT INTO Cart(user_id,product_detail_id,quant,status) VALUES ?`;
     // var data = req.body;
     // console.log(req.body);
-    var product = req.body.product_detail;
+    var product_detail_id = req.body.product_detail_id;
     var user_id = req.body.user_id;
-    console.log(product, user_id);
+    var quant= req.body.quant;
+    console.log(product_detail_id, user_id,quant);
     var value = [
-        [user_id, product]
+        [user_id, product_detail_id,quant,0]
     ]
     connection.query(sql, [value], (err, result) => {
         if (err) {
@@ -158,5 +159,30 @@ router.post('/cart-to-cart', (req, res, next) => {
 
 })
 
+router.post('/cart-remove-item', (req, res, next) => {
 
+    var product_detail_id = req.body.product_detail_id;
+    let sql = `DELETE FROM Cart WHERE 
+                user_id = "`+req.session.user+`"
+                AND product_detail_id="`+product_detail_id+`"`;
+    // var data = req.body;
+    // console.log(req.body);
+    console.log(product_detail_id, req.session.user);
+
+    connection.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.json({
+                code: '400',
+                error: "cannot Remove item"
+            })
+        } else if (result) {
+            console.log('remove item successfully');
+            res.json({
+                code: '201',
+            })
+        }
+    })
+
+})
 module.exports = router;
