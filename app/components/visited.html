@@ -8,7 +8,7 @@
         </span>
     </div>
     <div class="row text-center bg-white">
-        <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'">
+        <!-- <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'">
 
         </div>
         <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'">
@@ -19,8 +19,8 @@
         </div>
         <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'">
 
-        </div>
-        <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'">
+        </div> -->
+        <div class="_sale-item-col col-sm pl-1 pr-1 " ng-include src="'../app/components/item.html'" ng-repeat="item in items" ng-init="abc=true" ng-click="openLink(item.href)">
 
         </div>
 

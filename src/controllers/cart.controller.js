@@ -90,16 +90,16 @@ function CartController($rootScope,$scope,$window,$http){
         });
 
         console.log(user_info);
-        $http.post('/api/user/add-address', JSON.stringify($scope.userInfo)).then(function (result) {
-            console.log(result.data.code === "201");
+        // $http.post('/api/user/add-address', JSON.stringify($scope.userInfo)).then(function (result) {
+        //     console.log(result.data.code === "201");
 
-            if(result.data.code === "201"){
+        //     if(result.data.code === "201"){
                 
-            }
-        }, function (error) {
+        //     }
+        // }, function (error) {
         
-            console.log(error);
-        });
+        //     console.log(error);
+        // });
 
     }
 }
