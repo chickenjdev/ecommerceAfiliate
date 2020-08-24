@@ -1,6 +1,6 @@
 # ecommerceAfiliate
 Web bán hàng e-commerce, bán hàng công nghệ
-    - Gồm các chức năng thông thường của một web bán hàng
+- Gồm các chức năng thông thường của một web bán hàng
     + Trang chủ, đăng ký , đăng nhập
     + Trang sản phẩm , thông tin sản phẩm
     + Mua sản phẩm, 
@@ -9,8 +9,8 @@ Web bán hàng e-commerce, bán hàng công nghệ
     + Trang admin, quản lý sản phẩm , hóa đơn, đơn hàng...
 
 Hướng dẫn cài đặt : 
-    - git clone
-    - npm install 
-    - npm start
+- git clone
+- npm install 
+- npm start
 
 server start at port 3000 
