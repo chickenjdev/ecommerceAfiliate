@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search</title>
+
+    <script type="text/javascript" src="../app/background/background.js"> </script>
+
+    <link rel="stylesheet" href="/node_modules/material-icons/iconfont/material-icons.css">
+
+</head>
+
+<body ng-app='ecomApp' ng-controller='SessionController'>
+
+    <div id="root" ng-controller='SearchController'>
+        <section>
+            <div ng-include src="'../app/components/header.html'"></div>
+        </section>
+        <div class="_container">
+            <div class="container-fluid mt-sm-3 mb-sm-3 bg-white pd-3">
+                <div class="row p-3">
+                    <span class="col-sm-6">
+                        Kết quả tìm kiếm
+                    </span>
+                </div>
+                <div class="row text-center bg-white">
+                    <div ng-repeat="item in {{data}}">
+                        <div class="_sale-item-col pl-1 pr-1" ng-include src="'../app/components/item.html'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <section>
+                <div ng-include src="'../app/components/footer.html'"></div>
+            </section>
+        </div>
+</body>
+
+</html>

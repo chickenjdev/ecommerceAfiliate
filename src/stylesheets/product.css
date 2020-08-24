@@ -1,0 +1,59 @@
+._sale-item-col {
+    max-width: 320px;
+    padding : 5px 2px 5px 2px;
+}
+._sale-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    min-height: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+._sale-item:hover {
+    box-shadow: 0px 0px 20px 3px rgba(145,145,145,0.64);
+}
+._item-name {
+    margin-right: 0;
+    font-weight: 50;
+    font-size: 15px;
+    color: rgb(138, 138, 138);;
+}
+._item-discount {
+    color: rgb(233, 84, 58);
+    font-weight: 150;
+    font-style: bold;
+    line-height: 2;
+}
+._item-f-price {
+    color: rgb(146, 144, 144);
+    font-weight:150;
+    font-size: 15px;
+}
+._item-price {
+    font-weight:200;
+    font-size: 20px;
+}
+._item-sold-quant {
+    color: rgb(160, 160, 160);
+    font-weight:30;
+    font-size: 12px;
+}
+._item-name {
+    font-family: "Montserrat Light";
+    max-height: 55px;
+    min-height: 55px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    line-height: 1.54;
+    font-size: 18px;
+    font-weight: 100;
+    color: black;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.54;
+    letter-spacing: 0.1px;
+    text-align: left;
+}

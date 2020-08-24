@@ -1,0 +1,65 @@
+<div class="_header">
+        <!-- title bar -->
+        <div class="tit-bar text-dark">
+            <div class="tit-bar-container _container">
+                <ul class="tit-bar-options ">
+                    <li class="vertical-center ">
+                        <a  id="notify">
+                            <i class="material-icons vertical-center">notifications_none</i>
+                            <span class="vertical-center">Notify</span>
+                        </a>
+    
+                    </li>
+                    <li class="vertical-center " >
+                        <a ng-if = '!isLogged' href='/sign-up' id="sign-up">
+                            <i ng-if = '!isLogged' class="material-icons vertical-center ">person</i>
+                            <span ng-if = '!isLogged' class="vertical-center ">Sign Up</span>
+                        </a>
+                        <a ng-if = 'isLogged' href='/api/user/logout' id="sign-up" ng-click="logOut()">
+                            <i ng-if = 'isLogged' class="material-icons vertical-center ">exit_to_app</i>
+                            <span ng-if = 'isLogged' class="vertical-center ">Log out</span>
+                        </a>
+                    </li>
+                    <li class="vertical-center ">
+                        <a href ='/login' id="login">
+                            <i class="material-icons vertical-center">account_circle</i>
+                            <span ng-show="!isLogged" class="vertical-center ">Log In</span>
+                            <span ng-show="isLogged" class="vertical-center ">{//name//}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- header main -->
+        <div class="header-main _container">
+            <a href="../../../">
+                <img src="../../resources/logo/dark-logo.png" id="logo" class="cursor-hand"></img>
+            </a>
+    
+            <div id="search-bar">
+                <!-- <div>
+                    <input type="text" id="search-box" placeholder="Search in Aurel">
+                    <button id="search-button" class="material-icons vertical-center">search
+    
+                    </button>
+                </div> -->
+            </div>
+            <div id="cart" ng-if="isLogged" ng-controller = "CartController">
+                <div>
+                    <button id="cart-button" class="material-icons cursor-hand hover-change-back" ng-click="goToCart()"> shopping_cart
+    
+                    </button>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--  bar -->
+    
+        <!-- <div class="tit-bar">
+    
+        </div> -->
+    
+    
+    </div>

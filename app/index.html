@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aurel</title>
+
+    <link rel="stylesheet" href="/node_modules/material-icons/iconfont/material-icons.css">
+
+</head>
+
+<body ng-app="ecomApp" ng-controller="SessionController">
+    <div id="root" style="display: none;" ng-controller="MainController">
+        <section>
+            <div ng-include src="'app/components/header.html'"></div>
+        </section>
+        <section>
+            <div ng-include src="'app/components/slide.html'"></div>
+        </section>
+        <div class="_main-body">
+            <div class="_container head-body">
+                <!-- navigation -->
+                <section>
+                    <div ng-include src="'app/components/navigation.html'"></div>
+                </section>
+
+                <!-- Banner -->
+                <section>
+                    <div ng-include src="'app/components/homeBanner.html'" ng-controller="BannerController">
+                    </div>
+
+                </section>
+
+                <!-- Brand Category -->
+                <!-- <section>
+                    <div ng-include src="'app/components/brandCategory.html'" ng-controller="BrandCategoryController">
+
+                    </div>
+                </section> -->
+                <section>
+                    <div ng-include src="'app/components/visited.html'" ng-controller='VisitedController'></div>
+                </section>
+                <section>
+                    <div ng-include src="'app/components/visited.html'" ng-controller='VisitedController'></div>
+                </section>
+                <!-- <section>
+                    <div ng-include src="'app/components/topTrend.html'" ng-controller='TopTrendController'></div>
+                </section> -->
+                <div class=" p-3 text-center bg-black">
+                </div>
+            </div>
+        </div>
+        <section>
+            <div ng-include src="'app/components/preFooter.html'">
+            </div>
+        </section>
+        <section>
+            <div ng-include src="'app/components/footer.html'">
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="app/background/background.js"> </script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('root').style.display = 'block';
+            }, 0);
+
+        });
+    </script>
+
+</body>
+
+</html>

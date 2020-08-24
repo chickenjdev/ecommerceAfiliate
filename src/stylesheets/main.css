@@ -1,0 +1,109 @@
+* {
+    font-family: 'Montserrat Medium';
+}
+#root {
+
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+body {
+    background-color: rgba(243, 243, 243, 0.966);
+    margin: 0;
+    /* height: 100%;
+    width: 100%; */
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    
+    -ms-transform: scaleX(1) scaleY(1);
+    -webkit-transform: scaleX(1) scaleY(1);
+    transform: scaleX(1) scaleY(1);
+}
+body ._main-body {
+    padding-top: 20px;
+    
+}
+._container {
+    max-width: 75%;
+    /* width: 75vw;  */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._header {
+    font-family: "Montserrat Medium";
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(75deg, rgb(228, 228, 228) 0%, rgb(254, 255, 255) 100%, rgb(230, 230, 230) 100%); */
+    height: 125px;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}
+
+.item-center {
+    margin: auto;
+    align-items: center;
+    
+}
+.text-white {
+    color: white;
+}
+.cursor-hand {
+    cursor: pointer;
+}
+
+.hover-change-back{
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
